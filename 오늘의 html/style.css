@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+/* 로고에 쓰인 폰트가 1번 사용하니깐 그냥 이미지로 사용하는게 낫다 */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-style: normal;
+}
+/* 폰트 다운 */
+
+body{
+    font-family: 'Pretendard-Regular';
+    font-size:20px;
+}
+
+.blind{
+    display: none;
+}
+
+/* 전체적으로 사용할 내용 */
+
+header{
+    display: flex;
+    width: 1920px;
+    height: 101px;
+}
+
+.logo{
+    font-family: 'yg-jalnan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #3A2A21;
+    margin-left: 347px;
+}
+
+.logo img{
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+.menubar{
+    display: flex;
+}
+
+.menubar li{
+    margin: 0 50px;
+    list-style: none;
+    font-weight: 500px;
+    font-size: 20px;
+    margin-top: auto;
+
+}
+
+.menubar li a{
+    text-decoration: none;
+    color: black;
+}
+
+header nav{
+    margin:auto;
+    margin-left:30px;
+}
+
+.search{
+    display: block;
+}
+
+article button{
+    display: block;
+    margin-top:40px;
+    margin-right: 347px;
+    border: 0;
+
+}
+
+/* header 부분 */
+
+.section1{
+    background-color: #ffcf5c;
+    width: 1920px;
+    height: 699px;
+    
+}
+
+.section1 figure{
+    display: flex;
+    margin:0;
+    margin-block-start:0;
+    margin-block-end: 0;
+}
+
+.lion{
+    display: inline-block;
+    margin-left: 261px;
+    margin-top: 20px;
+}
+
+.section1-wrapper{
+    display: block;
+    margin:auto 0;
+}
+
+.section1-wrapper p{
+    font-weight: 600;
+}
+
+.section1-wrapper h2{
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 100px;
+    color: #3A2A21;
+    margin: 30px 0;
+}
+
+.section1-wrapper figcaption{
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #3A2A21;
+    width: 501px;
+}
+
+.section1-wrapper a{
+    display: inline-block;
+    border: 1px solid #3A2A21;
+    border-radius: 10px;
+    width: 180px;
+    height: 64px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 60px;
+    /* 인라인 요소에서 중앙정렬은 lin-height로 해결 */
+    color: #3A2A21;
+    margin-top: 50px;
+    margin-right: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.section1-wrapper .button1{
+    background-color: #3A2A21;
+    color: white;
+}
+
+.section1 aside{
+    margin-left:150px;
+    margin-top: 20px;
+}
+
+aside .article1{
+    background-image: url(image/aside_link.png);
+    width: 150px;
+    height: 200px;
+    margin: 0px 0px;
+    display: block;
+}
+/* section1 코드  */
+
+.section2 ul{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 1720px;
+}
+
+.section2 li{
+    width: 340px;
+    list-style: none;
+}
+
+.section2 li dt{
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.section2 li dd{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #767676;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+/* section2 */
+
+.section3 .image1{
+    width: 600px;
+    height: 288px;
+    background-image: url(image/뮤라\ 1.png);
+    border-radius: 10px;
+    color: white;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-color: #E37066;
+    /* background-size: cover; */
+    /* display: flex; */
+}
+
+.section3 .image2{
+    width: 600px;
+    height: 288px;
+    background: #CBDFF7;
+    border-radius: 10px;
+    color: black;
+    background-image: url(image/소울곰_애벌래\ 1.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+}
+
+.section3 .image3{
+    width: 600px;
+    height: 600px;
+    background: #D2E579;
+    border-radius: 10px;
+    color: black;
+    background-image: url(image/개리_퇴근\ 1.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.section3{
+    width: 1920px;
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.section3 .wrapper5 {
+    display: inline;
+}
+
+.section3 time{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    
+}
+
+.section3 h3{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+
+}
+
+.section3 ul{
+    list-style: none;
+}
+
+
