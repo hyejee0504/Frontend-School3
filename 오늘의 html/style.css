@@ -8,9 +8,22 @@
 
 @font-face {
     font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-style: normal;
+    src: url(./fonts/Pretendard-Regular.woff) format('woff');
 }
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url(./fonts/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard-ExtraBold';
+    src: url(./fonts/Pretendard-ExtraBold.woff) format('woff');
+}@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url(./fonts/Pretendard-SemiBold.woff) format('woff');
+}
+
+
+
 /* 폰트 다운 */
 
 body{
@@ -52,9 +65,9 @@ header{
 .menubar li{
     margin: 0 50px;
     list-style: none;
-    font-weight: 500px;
     font-size: 20px;
     margin-top: auto;
+    font-family: 'Pretendard-Bold';
 
 }
 
@@ -108,7 +121,7 @@ article button{
 }
 
 .section1-wrapper p{
-    font-weight: 600;
+    font-family: 'Pretendard-Bold';
 }
 
 .section1-wrapper h2{
@@ -117,6 +130,7 @@ article button{
     line-height: 100px;
     color: #3A2A21;
     margin: 30px 0;
+    font-family: 'Pretendard-ExtraBold';
 }
 
 .section1-wrapper figcaption{
@@ -166,9 +180,11 @@ aside .article1{
 .section2 ul{
     display: flex;
     justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 1720px;
+    padding-left: 300px;
+    padding-right: 300px;
+    width: 1220px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .section2 li{
@@ -177,9 +193,9 @@ aside .article1{
 }
 
 .section2 li dt{
-    font-weight: 800;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 34px;
+    font-family: 'Pretendard-ExtraBold';
 }
 
 .section2 li dd{
@@ -195,8 +211,8 @@ aside .article1{
 /* section2 */
 
 .section3 .image1{
-    width: 600px;
-    height: 288px;
+    width: 570px;
+    height: 258px;
     background-image: url(image/뮤라\ 1.png);
     border-radius: 10px;
     color: white;
@@ -208,8 +224,8 @@ aside .article1{
 }
 
 .section3 .image2{
-    width: 600px;
-    height: 288px;
+    width: 570px;
+    height: 258px;
     background: #CBDFF7;
     border-radius: 10px;
     color: black;
@@ -220,8 +236,8 @@ aside .article1{
 }
 
 .section3 .image3{
-    width: 600px;
-    height: 600px;
+    width: 570px;
+    height: 570px;
     background: #D2E579;
     border-radius: 10px;
     color: black;
@@ -233,11 +249,11 @@ aside .article1{
 .section3{
     width: 1920px;
     display: flex;
-    margin: 0 auto;
-
+    justify-content: center;
+    margin-bottom: 300px;
 }
 
-.section3 .wrapper5 {
+.section3 .section3_wrapper {
     display: inline;
 }
 
@@ -245,19 +261,22 @@ aside .article1{
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
-    
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    font-family: 'Pretendard-Bold';
 }
 
 .section3 h3{
+    font-family: 'Pretendard-ExtraBold';
     font-style: normal;
-    font-weight: 900;
     font-size: 40px;
     line-height: 40px;
-
+    margin-bottom: 10px;
 }
 
-.section3 ul{
-    list-style: none;
+.section3 figure{
+    padding-left: 30px;
+    padding-top: 30px;
 }
 
 
