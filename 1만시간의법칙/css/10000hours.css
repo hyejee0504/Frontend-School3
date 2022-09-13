@@ -30,13 +30,18 @@
 
 body{
     background-color:  #5B2386;
-    width: 1920px;
-    height: 1950px;
+    /* width: 1920px; */
+    /* height: 1950px; */
 }
 
 h1, p{
     margin: 0px;
 }
+
+.screen-out{
+    display: none;
+}
+
 header{
     background-image: url(../img/clock.png);
     background-position: center center;
@@ -64,10 +69,6 @@ header p{
 header img{
     width: 564px;
     height: 112px;
-}
-
-.screen-out{
-    display: none;
 }
 
 .section1{
@@ -131,9 +132,9 @@ button{
     border: 0;
     font-family: 'GmarketSansMedium';
     font-size: 24px;
-    color: #BABCBE;
-    text-align: center;
-    padding:0 0;
+    color: black;
+    text-align: left;
+    padding: 0 15px;
 }
 
 .section3 strong{
@@ -152,6 +153,26 @@ button{
 
 .section3 p{
     padding: 0 0;
+}
+
+#section3-hidden{
+    width: 200px;
+    height: 200px;
+    padding: 100px;
+    display: none;
+    margin: 0 auto;
+}
+
+#section3-hidden img{
+    animation: clock_cycle 2s linear infinite;
+    transform-origin: 50% 50%;
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes clock_cycle{
+    100% {transform: rotate(360deg);
+    }
 }
 
 .share-button{
@@ -177,7 +198,6 @@ footer p{
     align-items: center;
     text-align: center;
     color: #FFFFFF;
-    
 }
 
 .cont-modal{

@@ -28,8 +28,8 @@
         <section class="section2">
             <h2 class="screen-out">목표와 훈련시간계산</h2>
             <form action="">
-                <p class="txt-p">나는 <input type="text" placeholder="예) 프로그래밍"> 전문가가 될 것이다.</p>
-                <p class="txt-p">그래서 앞으로 매일 하루에 <input type="text" placeholder="예) 5시간"> 시간씩 훈련할 것이다.</p>
+                <p class="txt-p">나는 <input class="expert_input" type="text" placeholder="예) 프로그래밍"> 전문가가 될 것이다.</p>
+                <p class="txt-p">그래서 앞으로 매일 하루에 <input class="time_input" type="number" placeholder="예)5"> 시간씩 훈련할 것이다.</p>
             </form>
             <div class="button-img-wrapper">
                 <button class="time-button" type="submit">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
@@ -38,16 +38,20 @@
             
         </section>
         
-        <section class="section3">
+        <section id="section3" class="section3">
             <h2 class="screen-out">훈련일수와 훈련하러가기 연결</h2>
             <div class="txt-wrapper">
-                <p class="txt-p">당신은 <strong>프로그래밍</strong> 전문가가 되기 위해서</p>
-                <p class="txt-p">대략 <strong>5110</strong> 일 이상 훈련하셔야 합니다! :)</p>
+                <p class="txt-p">당신은 <strong id="expert_output">프로그래밍</strong> 전문가가 되기 위해서</p>
+                <p class="txt-p">대략 <strong id="time_output">5110</strong> 일 이상 훈련하셔야 합니다! :)</p>
             </div>
             <div class="button-wrapper">
                 <button class="url-go-button" type="submit">훈련하기 가기 GO!GO!</button>
                 <button class="share-button" type="submit">공유하기</button>
             </div>
+        </section>
+
+        <section id="section3-hidden">
+            <img src="./img/loading.png" alt="로딩중">
         </section>
     </main>
     <footer>
@@ -66,23 +70,6 @@
         <button class="delete-licat" type="submit">X</button>
     </section>
     
-    <script>
-        const modal = document.querySelector('.cont-modal');
-        const btnOpenPopup = document.querySelector('.url-go-button');
-  
-        btnOpenPopup.addEventListener('click', () => {
-          modal.style.display = 'block';
-        });
-
-        const modaldelete = document.querySelector('.cont-modal');
-        const btnClosePopup = document.querySelector('.delete-licat');
-  
-        btnClosePopup.addEventListener('click', () => {
-          modal.style.display = 'none';
-        });
-
-        const caculation_time = document.querySelector
-        btnCaculation.addEventListener('click'),() => {}
-    </script>
+    <script src="./js/10000hours.js"></script>
 </body>
 </html>
