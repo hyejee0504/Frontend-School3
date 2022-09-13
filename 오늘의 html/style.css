@@ -279,4 +279,32 @@ aside .article1{
     padding-top: 30px;
 }
 
+/* section3 */
 
+.section4{
+    width: 1920px;
+    text-align: center;
+    /* margint: auto; */
+}
+
+.tab-section{
+    width: 1920px;
+    display: flex;
+    list-style: none;
+}
+
+.tab-list ol div{
+    display: flex;
+}
+
+.tab-list time{
+    line-height: 65px;
+}
+
+.list{
+    text-align: center;
+}
+
+.list-wrapper{
+    justify-content: center;
+}
