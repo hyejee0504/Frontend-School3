@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+body{
+    background-color:  #5B2386;
+    width: 1920px;
+    height: 1950px;
+}
+
+h1, p{
+    margin: 0px;
+}
+header{
+    background-image: url(../img/clock.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-size: 550px; */
+    text-align: center;
+    height: 550px;
+}
+
+header h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 220px;
+    padding-bottom: 150px;
+}
+
+header p{
+    font-family: 'OTEnjoystoriesBA';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;;
+    color: #F5DF4D;
+}
+
+header img{
+    width: 564px;
+    height: 112px;
+}
+
+.screen-out{
+    display: none;
+}
+
+.section1{
+    background-image: url(../img/quotes.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.section1 p{
+    font-family: 'GmarketSansMedium';
+    font-style: normal;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    margin: 50px 0 50px 0;
+}
+
+.section1 strong{
+    font-weight: 700;
+    font-size: 24px;
+}
+.section2{
+    text-align: center;
+}
+
+button{
+    background: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    padding: 14px 49px;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    color: #5B2386;
+    border: 0;
+}
+
+.button-img-wrapper{
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.section2 img{
+    vertical-align: -200%;
+}
+
+.txt-p{
+    font-family: 'GmarketSansMedium';
+    font-style: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding: 15px 0;
+}
+
+.section2 input{
+    width: 228px;
+    height: 57px;
+    background: #FFFFFF;
+    border-radius: 7px;
+    border: 0;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    color: #BABCBE;
+    text-align: center;
+    padding:0 0;
+}
+
+.section3 strong{
+    font-size: 72px;
+    font-weight: 700;
+    font-family: 'GmarketSansBold';
+    line-height: initial;
+    vertical-align: middle;
+    
+}
+
+.section3{
+    text-align: center;
+    margin: 100px 0;
+}
+
+.section3 p{
+    padding: 0 0;
+}
+
+.share-button{
+    background-color: white;
+    margin: 0 10px;
+    padding-top: 19px;
+}
+
+.button-wrapper{
+    margin: 120px 0;
+}
+
+footer{
+    height: 195px;
+    text-align: center;
+}
+
+footer p{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 17px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+
+.cont-modal{
+    width: 800px;
+    height: 800px;
+    background: #FFFFFF;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    border: 0 0;
+    position:absolute;
+    top: 1000px;
+    left:600px;
+    display: none;
+
+}
+
+.cont-modal p{
+    font-family: 'OTEnjoystoriesBA';
+    font-style: normal;
+    font-size: 36px;
+    line-height: 60px;
+    color: #5B2386;
+    padding-top: 85px;
+}
+
+.cont-modal strong{
+    font-size: 96px;
+}
+
+.cont-modal button{
+    margin-top: 100px;
+}
+
+.delete-licat{
+    background-color: white;
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 0;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
