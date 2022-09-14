@@ -142,7 +142,7 @@ button{
     font-weight: 700;
     font-family: 'GmarketSansBold';
     line-height: initial;
-    vertical-align: middle;
+    vertical-align: -15px;
     
 }
 
@@ -153,6 +153,7 @@ button{
 
 .section3 p{
     padding: 0 0;
+
 }
 
 #section3-hidden{
