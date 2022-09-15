@@ -21,6 +21,7 @@
         const hidden_page = document.getElementById('section3-hidden')
 
         btnCaculation.addEventListener('click',() => {
+
             if(button_page.style.display=='none'){ 		
                 button_page.style.display = 'block'; 	
             }else{ 		
@@ -51,3 +52,5 @@
             button_page.style.display = 'block';
             return;
         }
+
+    
