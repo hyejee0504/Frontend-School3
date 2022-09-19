@@ -172,12 +172,10 @@ button:hover{
 }
 
 #section3-hidden img{
-    /* animation: clock_cycle 2s linear infinite; */
-    /* transform-origin: 50% 50%; */
+    animation: clock_cycle 2s linear infinite;
+    transform-origin: 50% 50%;
     width: 200px;
     height: 200px;
-    transform: rotate(360deg);
-    transition: all 0.5s;
 
 }
 
