@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .item{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            border: 1px solid black;
+            flex-grow: 1;
+        }
+        .item:nth-child(2){
+            flex-shrink: 0;
+            flex-basis: 200px;
+            /* 기본값은 1입니다. 0으로 바꾸면 화면크기가 작아져도 200에서 줄어들지 않는다. 깨지지 않기위해서 */
+            flex: 2 300px; 
+            flex: 1 1 300px;
+            /* 한번 작성 : grow, shrink, basis 순 
+            가로 크기가 300px로 고정되어 있지만 여백의 크기는 동일하게 나눠지고 줄어들때 300px이하로 안줄어든다*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+<script>
+
+</script>
+</body>
+</html>
