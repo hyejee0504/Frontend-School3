@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>자기소개</h1>
+    <textarea onkeydown='count()' class="form-control" name="" id="jasoseol" cols="30" rows="3">저는 인성 문제가 없습니다.</textarea>
+    <span id="count">(0/200)</span>
+<script>
+    
+    
+    //자동 형변환해서 할 수 있음.!!
+
+    function count(){
+        var content = document.getElementById('jasoseol').value;
+        if(content.length>200){
+            content.substring(0,200);
+            document.getElementById('jasoseol').value = content;
+        }
+        //공백포함해서 길이를 알아온다. 글자수
+        document.getElementById('count').innerHTML = '(' + content.length + '/ 200)';
+    }
+
+    
+
+    //키보드를 누를때마다 글자수가 바뀌어야함 
+    //이벤트 = 이벤트 핸들링
+    //  html안에 이벤트=이벤트핸들링
+</script>
+</body>
+</html>
+
+<!-- 
+    DOM모델
+    자바스크립트로 html을 만들 수 있도록 하는 모델 
+    document.getElementById('jasoseol');
+    함수 -> 명령 모음
+    function 함수이름(){};
+    .substring(0,200) - 0부터 199까지만 잘라준다.
+ -->

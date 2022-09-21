@@ -4,8 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-
-/* .wrapper{
+ .wrapper{
     box-sizing: border-box;
     width: 350px;
     height: 140px;
@@ -13,7 +12,7 @@
     border: 1px solid #DBDBDB;
     border-radius: 5px;
     margin: 30 auto;
-} */
+}
 
 .welcome_txt{
     width: 215px;
@@ -95,3 +94,5 @@
     height: 16px;
     vertical-align: -3px;
 }
+
+400, 500의 각 weight가 다른 폰트를 두개 다운 받는다

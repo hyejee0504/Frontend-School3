@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세렝게티MBTI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <article class="start">
+        <h1 class="mt=5 text-center">나랑 꼭 닮은 세렝게티 동물은?</h1> 
+        <!-- 마진 탑 = 5px -->
+        <button type="button" class="btn btn-primary mt=5" onclick="start();">테스트 시작하기</button>
+</article>
+<article class=" question">
+    <div class="progress mt=5">
+        <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+    </div>
+    <h2 class="text-center mt=5" id="title">문제</h2>
+    <input type="hidden" id="type" value="EI">
+    <button id="A" type="button" class="btn btn-primary mt=5">Primary</button>
+    <button id="B" type="button" class="btn btn-primary mt=5">Primary</button>
+</article>
+<article class="result">
+    <img id="img" src="" alt="">
+    <h2 id="animal">동물이름</h2>
+    <h3 id="des">설명</h3>
+</article>
+<input type="hidden" id="EI" value="0">
+<input type="hidden" id="SN" value="0">
+<input type="hidden" id="TF" value="0">
+<input type="hidden" id="JP" value="0">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<script>
+    function start(){
+        $(".start").hide();
+        $('.question').show();
+        next();
+    }
+    $('#A').click(function(){
+        var type = $('#type').val();
+        var preValue = $('#'+type).val();
+        $('#'+type).val(parseInt(preValue++));
+        next();
+    }) //E유형 count 더하기, 다음 페이지 이동하기
+
+    $('#B').click(function(){
+        next();
+    }) 
+
+    //객체를 이용해서 테스트 질문 정리하기
+    var q = {
+        1:{"title":"문제 1번", "type":"EI", "A":"E", "B":"I"},
+        2:{"title":"문제 2번", "type":"EI", "A":"E", "B":"I"},
+        3:{"title":"문제 3번", "type":"EI", "A":"E", "B":"I"},
+        4:{"title":"문제 4번", "type":"EI", "A":"E", "B":"I"},
+        5:{"title":"문제 5번", "type":"EI", "A":"E", "B":"I"},
+        6:{"title":"문제 6번", "type":"EI", "A":"E", "B":"I"},
+        7:{"title":"문제 7번", "type":"EI", "A":"E", "B":"I"},
+        8:{"title":"문제 8번", "type":"EI", "A":"E", "B":"I"},
+        9:{"title":"문제 9번", "type":"EI", "A":"E", "B":"I"}
+        
+    }
+
+    var result = {
+        "ISTJ":{"animal":"하마","des":"하마설명","img":"lion.jpg"}
+    }
+    var num = 1;
+
+    function next(){
+        
+        if(num==13){
+            $(".question").hide();
+            $(".result").show();
+            var mbti = "";
+            // if($('#EI').val()<2){
+            //     mbti += "I";
+            // }else{
+            //     mbti += "E";
+            // }
+            ($('#EI').val()<2) ? mbti += "I" :  mbti += "E";
+            ($('#SN').val()<2) ? mbti += "N" :  mbti += "S";
+            ($('#TF').val()<2) ? mbti += "F" :  mbti += "T";
+            ($('#JP').val()<2) ? mbti += "P" :  mbti += "J";
+            $('#img').attr("src",result[mbti]["img"]);
+            $('#animal').html(result[mbti]["animal"]);
+            $('#des').html(result[mbti]["des"]);
+
+            
+        }
+        else{
+            $('#progress-bar').attr('style', 'width: calc(100/12*'+num+'%)')
+            $("#title").html(q[num]["title"]);
+            $('#type').val(q[num]["type"]);
+            $('#A').html(q[num]["A"]);
+            $('#B').html(q[num]["B"]);
+            num++;
+        }
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

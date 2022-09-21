@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>jQuery 기초</h1>
+    <TExtarea id="content">jQuery를 배워보자</TExtarea>
+    <button id="click" onclick="hello()"></button>
+    
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+</script>
+<script>
+    $('#content').val();
+    function hello(){
+        console.log('hello');
+    }
+    $('#click').click(hello);
+    $('#click').click(function(){
+        console.log('hello hi');
+    }) //익명함수
+
+</script>
+
+
+
+</body>
+</html>
+
+<!-- 
+    jQUERY - 자바스크립트를 쉽게할 수 있음
+    간결한 문법, 편리한 API, 크로스 브라우징
+    $(선택자).행위;
+    익명함수 : 이름이 없는 함수
+    함수 이름없이 바로 호출하기
+
+ -->

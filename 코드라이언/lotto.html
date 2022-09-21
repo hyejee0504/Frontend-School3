@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+<script>
+    // var num = Math.random()*45+1; // 1-46 소수
+    // var ball1 = parseInt(num);
+    // document.write(ball1);
+    var lotto = [];
+    // for(var a=0;a<6;a++){
+    //     var num = parseInt(Math.random()*45+1);
+    //     if(lotto.indexOf(num)==-1){
+    //         lotto.push(num);
+    //     }
+    // }
+    //중복된 숫자가 나올 수 있음! 중복 처리
+    //for문이 아닌 while을 사용하여 조건을 준다. 6개면 끝나도록 하기
+
+    while(lotto.length<6){
+        var num = parseInt(Math.random()*45+1);
+        if(lotto.indexOf(num)==-1){
+            lotto.push(num);
+        }
+    }
+    lotto.sort((a,b)=>a-b);
+    // 오름차순 정리
+</script>
+</body>
+</html>
+
+<!-- 1-45숫자 중 6개 뽑기
+공1개를 뽑아보자
+math, random(); - 0이상 1미만의 실수가 나옴
+배열 - 하나의 변수에 여러 값, 
+.push(7); - 마지막에 7이 넣어진다. 
+.indexOf(값) - 값이 있으면 위치, 없으면 -1
+.length()
+.sort() 오름차순 정리 앞자리 기준으로
+.sort((a,b)=>a-b) - 오름차순
+.sort((a,b)=>b-a) - 내림차순
+ -->

@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
 <body>
-    <h1>조현습 사랑해에</h1>
+    <h1>자기 소개 글자수 제한 만들기</h1>
+    <textarea name="" id="jasoseol" cols="30" rows="10" onkeydown="counter();">자기소개를 입력하세요.</textarea>
+    <span id="count">(0/200)</span>
+    
+    <script>
+        function counter(){
+            var content = document.getElementById('jasoseol').value;
+            var lenofcontent = content.length;
+            console.log(lenofcontent);
+            if (lenofcontent > 200){
+                content = content.substring(0,200);
+                document.getElementById('jasoseol').value = content;
+                lenofcontent = content.length
+            }
+            document.getElementById('count').innerHTML = '(' + lenofcontent + '/200)';
+        }
+        counter();
+    </script>
+
 </body>
-</html>
