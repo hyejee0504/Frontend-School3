@@ -2,6 +2,7 @@
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
 }
+
 *{
     margin: 0 0;
     padding: 0 0;
@@ -88,6 +89,7 @@ ul{
     font-weight: 500;
     font-size: 12px;
     border: 0px;
+    cursor: pointer;
 }
 
 .can_txt{
@@ -122,6 +124,7 @@ ul{
     /* line-height: 19px; */
     border-radius: 5px;
     margin-bottom: 11px;
+    cursor: pointer;
 }
 
 .balance{
@@ -185,6 +188,7 @@ ul{
     box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.593), -1px -1px 2px #80808097;
     border: 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .put_can{
@@ -213,10 +217,7 @@ ul{
 
 .put_can::-webkit-scrollbar-track,
 .my_cans::-webkit-scrollbar-track{
-    background-color: #EAE8FE;
-    border-radius: 10px;
-    background-clip: padding-box;
-    box-shadow: inset 0px 0px 5px transparent;
+    border-radius: 50px;
 }
 
 
@@ -379,6 +380,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 6px;
 }
 
 .basketlist_section img{
