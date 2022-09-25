@@ -1,3 +1,8 @@
+//1. 입금액을 넣었을 때 10원 단위로 잡기 안댕;
+//2. 잔액이 마이너스 안되도록 하기
+//3. 
+
+
 var color;
 var color_check = [];
 
@@ -148,10 +153,15 @@ function addcan_list(color) {
 
 //캔 살 때 돈 계산되는 함수
 function sell_can(){
-        var a = parseInt(now_money)-1000;
-        total_money += 1000;
-        return a;
-}
+        if(now_money < 1000){
+            alert("잔액이 금액보다 적습니다. 입금해주세요.");
+        }
+        else{   
+            var a = parseInt(now_money)-1000;
+            total_money += 1000;
+            return a;
+        }
+    }
 
 // 처음에 리스트에 추가하는 함수
 function addcan(color) {
