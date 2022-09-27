@@ -4,6 +4,11 @@
     --thi: #ffa6b5;
     --four: #ffe5c0;
 }
+@keyframes blink-left{
+    to{
+        transform: scaleY(0.2) scaleX(1.2);
+    }
+}
 
 @keyframes leftear-top{
     to{
@@ -66,7 +71,18 @@
     80%{
         transform: rotate(20deg) scaleX(-1);
     } 
+}
 
+@keyframes eyebrowleft1{
+    to{
+        transform: scaleY(3) scaleX(0.7) rotate(55deg);
+    }
+}
+
+@keyframes eyebrowleft2{
+    to{
+        transform: scaleY(3) scaleX(0.7) rotate(-70deg);
+    }
 }
 
 
@@ -247,6 +263,7 @@ body {
 .eye.left{
     left: 260px;
     transform: rotate(-10deg);
+    animation: blink-left 2s  infinite alternate; 
 }
 
 .eye.right{
@@ -267,11 +284,13 @@ body {
 .eyebrow.left1{
     transform: rotate(55deg);
     left: -2px;
+    animation: eyebrowleft1 2s infinite alternate;
 }
 
 .eyebrow.left2{
     transform: rotate(-70deg);
     left: 8px;
+    animation: eyebrowleft2 2s infinite alternate;
 }
 
 .eyebrow.right1{
