@@ -1,8 +1,3 @@
-//1. 입금액을 넣었을 때 10원 단위로 잡기 안댕;
-//2. 잔액이 마이너스 안되도록 하기
-//3. 
-
-
 var color;
 var color_check = [];
 
@@ -17,7 +12,6 @@ var result_checked = {"red_check": 0, "violet_check": 0, "yellow_check": 0, "sky
 var my_money = 25000; //소지금 입력해야한다.
 var can_num = {"red":3, "violet":3, "yellow":0, "skyblue":3, "green":3, "orange":3}; //캔마다 갯수 입력해야한다.
 
-
 //처음 웹페이지에서 초기화해줌 - 갯수가 없을 때 애초에 품절표시
 for(var i=0;i<6;i++){
     color = colorline[i];
@@ -28,17 +22,21 @@ for(var i=0;i<6;i++){
 }
 
 //입금 버튼
-$('.deposit_button').click(function(){
-    now_money = parseInt($('.input_money').val()); //입력한 입금액을 잔액으로 이동
+document.querySelector('.deposit_button').addEventListener('click', () => {
+    now_money = parseInt(document.querySelector('.input_money').value); //입력한 입금액을 잔액으로 이동
     if(now_money>my_money){
         alert("소지금보다 작은 금액을 입력하세요");
     }
+    else if(now_money%10!=0){
+        alert("10원 단위로 맞춰주세요.");
+        document.querySelector('.input_money').value = null;
+    }
     else{
-            if($('#balance_money').text()==0 || $('#balance_money').text()==""){
+            if( document.getElementById('balance_money').textContent==0 || document.getElementById('balance_money').textContent==""){
                 my_money = my_money - now_money; //소지금을 미리 계산해놓음
                 document.getElementById('balance_money').innerHTML = priceToString(now_money);
                 document.getElementById('all_money').innerHTML = priceToString(my_money);
-                $('.input_money').val(null) ; //입금액 초기화 
+                document.querySelector('.input_money').value = null;
             }
             else{
                 alert("거스름돈 반환 버튼을 먼저 눌러주세요.");
@@ -47,7 +45,7 @@ $('.deposit_button').click(function(){
 })
 
 //거스름돈 반환 버튼
-$('.return_button').click(function(){
+document.querySelector('.return_button').addEventListener('click', () => {
     my_money = my_money + now_money; //소지금 계산하기
     document.getElementById('all_money').innerHTML = priceToString(my_money); //소지금에 입력
     now_money = 0;
@@ -55,44 +53,43 @@ $('.return_button').click(function(){
 })
  
 //획득 버튼
-$('.gain_button').click(function(){
-    $('#total_money').text(priceToString(total_money));
-    $('#can_wishlist').text('');
+document.querySelector('.gain_button').addEventListener('click', () => {
+    document.getElementById('total_money').innerHTML = priceToString(total_money);
+    document.getElementById('can_wishlist').innerHTML = '';
     reset_count();
     result_list();
 })
 
-
 //색 버튼마다 실행
-$('.red').click(function(){
+document.querySelector('.red').addEventListener('click', () => {
     color = 'red';
     button_click(color);
-});
-
-$('.violet').click(function(){
+  });
+  
+document.querySelector('.violet').addEventListener('click', () => {
     color = 'violet';
     button_click(color);
-});
-
-$('.yellow').click(function(){
+  });
+  
+document.querySelector('.yellow').addEventListener('click', () => {
     color = 'yellow';
     button_click(color);
-});
-
-$('.skyblue').click(function(){
+  });
+  
+document.querySelector('.skyblue').addEventListener('click', () => {
     color = 'skyblue';
     button_click(color);
-});
-
-$('.green').click(function(){
+  });
+  
+document.querySelector('.green').addEventListener('click', () => {
     color = 'green';
     button_click(color);
-});
+  });
 
-$('.orange').click(function(){
+document.querySelector('.orange').addEventListener('click', () => {
     color = 'orange';
     button_click(color);
-});
+  });
 
 // 함수 모음
 //색 버튼 누르면 실행되는 함수
@@ -119,7 +116,6 @@ function button_click(color){
             if(checked==0){
                 all_out(color);
             }
-                
         }
     }
 }
@@ -130,6 +126,7 @@ function list_color_check(color){
         color_check.push(color);
     }
 }
+
 //획득되는 리스트에 담긴 리스트를 옆으로 옮기도록 하고 숫자 증가하는 부분
 function result_list(){
     for(var i=0; i< color_check.length; i++){
@@ -139,7 +136,7 @@ function result_list(){
             result_checked[color+"_check"]++;
         }
         else{
-            $('.'+color+'_value').text(result_count[color+'_result']);
+            document.getElementById(color+'_value').innerHTML = result_count[color+'_result'];
         }
     }
 }
@@ -147,7 +144,7 @@ function result_list(){
 function addcan_list(color) {
     let ul = document.getElementById('can_basketlist');
     let li = document.createElement("li");
-    li.innerHTML = `<div class="basketlist_section"><img src="images/${color}.png"><p>${can_name[color]}</p><span class="${color}_value">${result_count[color+'_result']}</span></div>`;
+    li.innerHTML = `<div class="basketlist_section"><img src="images/${color}.png"><p>${can_name[color]}</p><span id="${color}_value">${result_count[color+'_result']}</span></div>`;
     ul.appendChild(li); 
 }
 
@@ -173,7 +170,7 @@ function addcan(color) {
 
 //리스트 안에 숫자 늘어나는 함수
 function addcount(color, a){
-    $('#'+color+'_count_value').text(a);
+    document.getElementById(color+'_count_value').innerHTML = a;
 }
 
 //캔의 수가 남아 있는 체크하는 함수
@@ -185,8 +182,8 @@ function check_can_amount(color){
 
 //색에 따라서 품절 띄우기, 호버 없애기
 function all_out(color){
-    $("#"+color+"_black_out").attr("style", "display: flex");
-    $("#"+color+"_can_box").attr("style", "pointer-events: none");
+    document.getElementById(color+"_black_out").style.display = 'flex';
+    document.getElementById(color+"_can_box").style.pointerEvents = "none"
 }
 
 //리스트에 담았던 캔들을 숫자 다시 리셋하는 함수
@@ -200,5 +197,4 @@ function reset_count(){
 function priceToString(price) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
-
 
