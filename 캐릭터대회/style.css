@@ -29,6 +29,47 @@
     }
 }
 
+@keyframes arm-left{
+    to{
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes arm-right{
+    to{
+        transform: rotate(-5deg) scalex(-1);
+    }
+}
+
+@keyframes cheek-left{
+    20%{
+        transform: rotate(-20deg) scaleX(1);
+    }
+    50%{
+        transform: rotate(-20deg) scalex(1.2);
+        background-color: #ffa6b5;
+    }
+    80%{
+        transform: rotate(-20deg) scaleX(1);
+    } 
+
+}
+
+@keyframes cheek-right{
+    20%{
+        transform: rotate(20deg) scaleX(-1);
+    }
+    50%{
+        transform: rotate(20deg) scalex(-1.2);
+        background-color: #ffa6b5;
+    }
+    80%{
+        transform: rotate(20deg) scaleX(-1);
+    } 
+
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -328,11 +369,13 @@ body {
 
 .cheek.left{
     left: 170px;
+    animation: cheek-left 6s infinite alternate;
 }
 
 .cheek.right{
     right: 155px;
     transform: rotate(20deg) scaleX(-1);
+    animation: cheek-right 6s infinite alternate;
 }
 
 .cheekspark1{
@@ -416,4 +459,30 @@ body {
     border: 7px solid #000;;
 }
 
+.arm{
+    position: absolute;
+    top: 500px;
+    
+    width: 100px;
+    height: 160px;
+    border: 10px solid var(--sec);
+    border-bottom: white;
+    background-color: white;
+    border-radius: 45% 55% 100% 0% / 61% 100% 0% 39% ;
+    transform: rotate(-20deg);
+    z-index: 5;
+}
+
+.arm.left{
+    left: 300px;
+    animation: arm-left 3s infinite alternate;
+    transition-duration: 1s;
+}
+
+.arm.right{
+    left: 610px;
+    transform: rotate(20deg) scaleX(-1);
+    animation: arm-right 3s infinite alternate;
+    transition-duration: 1s;
+}
 
