@@ -1,0 +1,21 @@
+@debug 100 >50; //true
+
+//주로 쓰는 것은 같은지, 다른지
+@debug 1px == '1px'; //같다
+@debug 1px != 1em; //다르다
+
+.one{
+    font-size:10px + 10px;
+
+}
+
+.two {
+    font-size: 10px - 10px;
+}
+
+.three{
+    font-size: 10px * 10; //px끼리 곱할 수 없음
+}
+//나누기는 괄호를 써야한다
+//괄호 안쓰면 문자열로 인식한다.
+

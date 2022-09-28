@@ -1,0 +1,49 @@
+li:nth-child(1) .thumb {
+  background-image: url(./assets/img/backbround1.png);
+}
+
+li:nth-child(2) .thumb {
+  background-image: url(./assets/img/backbround2.png);
+}
+
+li:nth-child(3) .thumb {
+  background-image: url(./assets/img/backbround3.png);
+}
+
+li:nth-child(4) .thumb {
+  background-image: url(./assets/img/backbround4.png);
+}
+
+li:nth-child(5) .thumb {
+  background-image: url(./assets/img/backbround5.png);
+}
+
+li:nth-child(6) .thumb {
+  background-image: url(./assets/img/backbround6.png);
+}
+
+li:nth-child(7) .thumb {
+  background-image: url(./assets/img/backbround7.png);
+}
+
+li:nth-child(8) .thumb {
+  background-image: url(./assets/img/backbround8.png);
+}
+
+li:nth-child(9) .thumb {
+  background-image: url(./assets/img/backbround9.png);
+}
+
+li:nth-child(10) .thumb {
+  background-image: url(./assets/img/backbround10.png);
+}
+
+.profile {
+  display: block;
+  border-radius: 50%;
+  -ms-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: unitCheck(100);
+  height: unitCheck(100);
+  background-color: red;
+}/*# sourceMappingURL=014_실무예제.css.map */

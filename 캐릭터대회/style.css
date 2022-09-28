@@ -5,7 +5,7 @@
     --four: #ffe5c0;
 }
 @keyframes blink-left{
-    to{
+    50%{
         transform: scaleY(0.2) scaleX(1.2);
     }
 }
@@ -57,8 +57,9 @@
     80%{
         transform: rotate(-20deg) scaleX(1);
     } 
-
 }
+
+
 
 @keyframes cheek-right{
     20%{
@@ -73,15 +74,35 @@
     } 
 }
 
+@keyframes cheekline-left{
+    20%{
+        border: 7px solid white;
+    }
+    70%{
+        transform: rotate(10deg);
+        border: 7px solid var(--sec);
+    }
+}
+
+@keyframes cheekline-right{
+    20%{
+        border: 7px solid white;
+    }
+    70%{
+        transform: rotate(-10deg) ;
+        border: 7px solid var(--sec);
+    }
+}
+
 @keyframes eyebrowleft1{
     to{
-        transform: scaleY(3) scaleX(0.7) rotate(55deg);
+        transform: scaleY(1.7) scaleX(0.7) rotate(55deg);
     }
 }
 
 @keyframes eyebrowleft2{
     to{
-        transform: scaleY(3) scaleX(0.7) rotate(-70deg);
+        transform: scaleY(1.7) scaleX(0.7) rotate(-70deg);
     }
 }
 
@@ -89,6 +110,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #ffa6b5;
 }
 
 *,
@@ -263,7 +285,7 @@ body {
 .eye.left{
     left: 260px;
     transform: rotate(-10deg);
-    animation: blink-left 2s  infinite alternate; 
+    animation: blink-left 5s  infinite alternate; 
 }
 
 .eye.right{
@@ -284,13 +306,13 @@ body {
 .eyebrow.left1{
     transform: rotate(55deg);
     left: -2px;
-    animation: eyebrowleft1 2s infinite alternate;
+    animation: eyebrowleft1 7s infinite alternate;
 }
 
 .eyebrow.left2{
     transform: rotate(-70deg);
     left: 8px;
-    animation: eyebrowleft2 2s infinite alternate;
+    animation: eyebrowleft2 7s infinite alternate;
 }
 
 .eyebrow.right1{
@@ -362,7 +384,6 @@ body {
     border-top-left-radius: 50%;
     transform: scaleX(-1) rotate(60deg);
     z-index: 4;
-    
 }
 
 .glasscenter{
@@ -418,6 +439,53 @@ body {
     background-color: var(--four);
     z-index: 4;
 }
+
+.cheekline{
+    position: absolute;
+    top: 230px;
+    width: 30px;
+    height: 65px;
+    background-color: white;
+    border: 7px solid white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.cheekline.left{
+    left: 250px;
+    animation: cheekline-left 6s infinite alternate;
+}
+
+.cheekline.right{
+    left: 339px;
+    animation: cheekline-right 6s infinite alternate;
+    transform: matrix(-1);
+}
+
+.cheekline.left::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    width: 100px;
+    height: 50px;
+    background: white;
+    z-index: 3;
+    transform: rotate(-90deg);
+}
+
+.cheekline.right::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -66px;
+    width: 100px;
+    height: 50px;
+    background: white;
+    z-index: 3;
+    transform: rotate(-90deg);
+}
+
 
 
 .mouth {
@@ -481,7 +549,6 @@ body {
 .arm{
     position: absolute;
     top: 500px;
-    
     width: 100px;
     height: 160px;
     border: 10px solid var(--sec);
@@ -504,4 +571,6 @@ body {
     animation: arm-right 3s infinite alternate;
     transition-duration: 1s;
 }
+
+
 

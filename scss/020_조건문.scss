@@ -1,0 +1,13 @@
+@mixin avatar($size, $circle: false) {
+    width: $size;
+    height: $size;
+    background-color: red;
+    @if $circle {
+      border-radius: $size / 2;
+    }
+  }
+
+  
+.one{
+    @include avatar(10, true)
+}

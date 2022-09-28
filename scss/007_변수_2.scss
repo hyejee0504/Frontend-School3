@@ -1,0 +1,32 @@
+$하나 : 1;
+$둘 : 2;
+
+$img : './assets/'
+$three : 'background.png'
+
+.test{
+    background-image: url($img+$three);
+}
+
+$four : #fff;
+
+$five : ture;
+
+$six : null;
+
+$font-size : 10px 12px 16px;
+$image-file : photo_01, photo_02;
+
+.test2{
+    font-size: nth($list : $font-size, $n : 2);
+}
+
+.test3{
+    font-size: nth($list : $font-size, $n : 3);
+}
+
+$font-weight{"regular":400, "medium":500};
+
+.test4{
+    font-weight: map-get($map: $font-weight, $key: "regular");
+}
