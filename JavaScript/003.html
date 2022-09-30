@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    
+<script>
+
+    let txt = "abcdefghijk";
+    let txt2 = "mom said 'hello'";
+    let txt3 = "mom said \"hello\"";
+    let txt4 = "a\nb\ncde"; //\n은 줄바꿈, \t은 탭
+    // \n, \t은 한개의 문자로 처리
+    let txt5 = "10"
+
+    console.log(txt[0]);
+    console.log(txt[4]+txt[5]);
+    console.log(txt2);
+    console.log(txt3);
+    console.log(txt4);
+
+    console.log(txt.length); //글자수 
+    //index = length - 1
+    console.log(txt.indexOf('e')); //index를 반환
+    console.log(txt.search("e")); //정규표현식
+
+    console.log(txt.indexOf('z')); //못찾으면 -1이다.
+
+    //slice
+</script>
+</body>
+</html>
