@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <ul></ul>
+    <button>make list</button>
+<script>
+    const ul = document.querySelector('ul');
+    const btn = document.querySelector('button');
+
+    btn.addEventListener('click', function(){
+        const li = document.createElement('li'); //요소 만들기  
+        const txt = document.createTextNode('안녕하세요');
+        li.appendChild(txt);
+        ul.appendChild(li); //마지막자식으로 넣어주기
+
+        
+
+
+    })
+</script>
+</body>
+</html>

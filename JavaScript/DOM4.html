@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- <p></p>
+    <input type="text">
+    <button>write something</button> -->
+
+    <div class="source">
+        '<p>hello<br>my              name is               <div style="color: blue;">hyeji</div></p>'
+    </div>
+
+    <div class="class1"></div>
+    <div class="class2"></div>
+    <div class="class3"></div>
+
+    <button class="btn1">innerHTML</button>
+    <button class="btn2">innerText</button>
+    <button class="btn3">textContent</button>
+
+<script>
+    // const text = document.querySelector('p');
+    // const text_input = document.querySelector('input');
+    // const btn = document.querySelector('button');
+
+    // text_input.addEventListener('input', function(){
+    //     text.innerText = text_input.value;
+    //     // text.textContent = text_input.value;
+    //     // 둘의 차이란? innerText는 사람이 읽을 수 있는 요소만 출력하고 textContent는 전부 출력하고  br태그 같은 것을 못 읽는다. 그냥 text만 출력할 예정이면 textContent를 한다(처리속도 빠름)
+    //     //inner.HTML과 createElement()이렇게 일일이 만드는 것의 차이: 코드가 짧아도 innerHTML이 더 시간이 길게 걸린다.
+    // }) 
+
+    // text.innerHTML = "<h2>무아아앙 피고내에</h2>" //안에 있는 값, 내용만을 바꾼다.
+    // text.outerHTML = "<div></div>" //타겟 자체를 바꾼다.
+
+    let source = document.querySelector('.source');
+    
+    document.querySelector('.btn1').addEventListener('click', function(){
+        alert(source.innerHTML);
+        console.log(source.innerHTML);
+
+    })
+
+    document.querySelector('.btn2').addEventListener('click', function(){
+        alert(source.innerText);
+
+    })
+
+    document.querySelector('.btn3').addEventListener('click', function(){
+        alert(source.textContent);
+
+    })
+   
+    
+    
+   
+
+    // document.querySelector('.class2').innerText = '<p>hello<br>my              name is               <strong>hyeji</strong></p>';
+    // document.querySelector('.class3').textContent = '<p>hello<br>my              name is               <strong>hyeji</strong></p>';
+
+    // console.log(source.innerHTML);
+    // console.log(source.innerText);
+    // console.log(source.textContent);
+
+</script>
+</body>
+</html>

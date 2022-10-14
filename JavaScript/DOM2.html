@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #box{
+            background-color: black;
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <ul>
+        <li><button class="red">빨강</button></li>
+        <li><button class="yellow">노랑</button></li>
+        <li><button class="green">초록</button></li>
+    </ul>
+<script>
+
+    const btn_all = document.querySelectorAll('button');
+    const box = document.querySelector('#box');
+
+    btn_all.forEach((element, index) => {
+        element.onclick = () => {
+            box.style.background = element.className;
+        }
+    });
+
+    /*2번째 방법
+    const btn_red1 = document.querySelector('.red');
+    const btn_yellow1 = document.querySelector('.yellow');
+    const btn_green1 = document.querySelector('.green');
+
+
+    btn_red1.addEventListener('click', function(){
+        document.getElementById('box').style.backgroundColor = 'red';
+    })
+
+    btn_yellow1.addEventListener('click', function(){
+        document.getElementById('box').style.backgroundColor = 'yellow';
+    })
+
+    btn_green1.addEventListener('click', function(){
+        document.getElementById('box').style.backgroundColor = 'green';
+    })
+    */
+
+    /*3번째 방법
+    const box = document.getElementById('box');
+    const btn_red1 = document.querySelector('.red');
+    const btn_yellow1 = document.querySelector('.yellow');
+    const btn_green1 = document.querySelector('.green');
+
+    const btnArr = [btn_red1, btn_yellow1, btn_green1];
+
+    btnArr.forEach(function(item){
+        item.addEventListener('click', () => {
+            if(item.classList.contains('red')){
+                document.getElementById('box').style.backgroundColor = 'red';
+            }
+            else if(item.classList.contains('yellow')){
+                document.getElementById('box').style.backgroundColor = 'yellow';
+            }
+            else{
+                document.getElementById('box').style.backgroundColor = 'green';
+            }
+        })
+    })
+    */
+
+
+
+    //재현님은 클래스에 red, green, yellow를 추가하면 색이 바뀌도록 css작업을 해 놓으셨고 classlist.add로 이름추가하여 색이 바뀌도록 하셨당.
+
+</script>
+</body>
+</html>
