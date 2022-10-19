@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>버튼입니다.</button>
+<script>
+    const btn = document.querySelector('button');
+    const myObj = {
+        name: 'test',
+        test(){
+            btn.addEventListener('click', (e)=>{
+                console.log(this); //myObj가 출력된다.
+                console.log(this.name);
+            })
+        }
+    }
+</script>
+</body>
+</html>
