@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+
+#mainform{
+    width: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ff8787;
+
+}
+
+#mainform fieldset{
+    border: none;
+}
+
+#mainform legend{
+    font-size: 1.3em;
+    margin: 0 auto;
+    /* text-align: center; 둘다가능*/
+    /* field 패딩 무시..! 신기한 속성이 있다아 */
+}
+
+#mainform label{
+    display: block;
+}
+
+#mainform input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px raba(0, 0, 0, 0.25) inset;
+}
+
+/* 입력한 값이 유효하다면..! */
+#mainform input:valid{
+    background-color: #e5dbb2;
+}
+
+#mainform button{
+    float: right;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #f8c4b4;
+    border-radius: 10px;
+    border: none;
+}
+/* fieldset에 포함된다.(float로 설정해도)
+ */
+
+#mainform progress{
+    width: 100%;
+}

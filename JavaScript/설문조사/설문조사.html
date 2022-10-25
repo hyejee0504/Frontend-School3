@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" id="mainform">
+        <fieldset>
+            <legend>JS 스터디 모집 설문조사</legend>
+            <!-- fieldset안에 제목은 legend이다. -->
+            <progress max="100" value="0" class="bar-progress"></progress>
+            <p class="msg-notice">설문지를 작성해주세요!</p>
+
+            <label for="q1">질문1. 무엇을 가장 배우고 싶으세요?</label>
+            <input type="text" id="q1" required>
+
+            <label for="q2">질문2. 시간은 언제가 적당한가요?</label>
+            <input type="text" id="q2" required>
+
+            <label for="q3">질문3. 몇 시간정도 예상하세요?</label>
+            <input type="text" id="q3" required>
+
+            <label for="q4">질문4. 난이도를 조정한다면?</label>
+            <input type="text" id="q4" required>
+
+            <label for="q5">질문5. 끝으로 하고싶은 말이 있나요?</label>
+            <input type="text" id="q5" required>
+
+            <button type="submit">제출하기</button>
+            <button type="reset">초기화</button>
+        </fieldset>
+        <!-- form안에서 fieldset은 그룹화 -->
+    </form>
+<script>
+    const mainform = document.querySelector('#mainform')
+    const progressbar = mainform.querySelector('.bar-progress')
+    const message = mainform.querySelector('.msg-notice')
+    const input = mainform.querySelector('input')
+    // nodelist로 저장된다.
+    const btn = mainform.querySelector('button[type="reset"]')
+
+    //유효한 인풋의 갯수를 저장
+    let validcounter = 0;
+    mainform.addEventListener('keyup', () => {
+        // input.forEach((item) => {
+        //     // console.log(item.validity);
+        //     if(item.validity.valid){
+        //         validcounter++;
+        //     }
+        // })
+
+        const result = 
+        Array.prototype.filter.call(input, (item) => {
+            return item.validity.valid;
+        })
+        // Array.from(inputs), [...input]도 가능하다.
+        console.log(result);
+
+        switch (validcounter){
+            case 1:
+                message.textContent = "좋습니다! 계속 진행하세요";
+                progressbar.setAttribute('value', 20);
+                break;
+            case 2:
+                message.textContent = "좋습니다! 계속 진행하세요";
+                progressbar.setAttribute('value', 40);
+                break;
+           case 3:
+                message.textContent = "좋습니다! 계속 진행하세요";
+                progressbar.setAttribute('value', 60);
+                break;
+            case 4:
+                message.textContent = "좋습니다! 계속 진행하세요";
+                progressbar.setAttribute('value', 80);
+                break;
+            case 5:
+                message.textContent = "제출하세요";
+                progressbar.setAttribute('value', 100);
+                break;
+            default:
+                message.textContent = '설문지를 작성해주세요';
+                progressbar.setAttribute('value', 0);
+        }
+
+
+    })
+</script>
+</body>
+</html>
