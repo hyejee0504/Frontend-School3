@@ -60,3 +60,47 @@ hyeji.likeFood(food);
 
 // let robot1 = new NewFactory(['알리오올리오', '마라탕', '순두부찌개', '삼겹살', '맥주', '고기국수', '콘치즈']);
 
+// class MakeSausage {
+//     constructor(ingredients){
+//         this.ingredients = ingredients;
+//     }
+//     taste(){
+//         console.log([...ingredients]+'맛이 난다!');
+//     }
+// }
+
+// class FireSauseage extends MakeSausage{
+//     constructor(ingredients){
+//         super(ingredients);
+//     }
+//     taste_fire(){
+//         this.taste();
+//         console.log('불맛이 난다!');
+//     }
+// }
+
+// const babysauseage = new FireSauseage();
+// babysauseage.taste_fire(['파', '불고기']);
+
+class 소세지 {
+    constructor(...theArgs){
+        for (const arg of theArgs) {
+            this[arg] = arg
+        }
+    }
+    taste(){
+        let text = ""
+        for(const key in this){
+        text += `${this[key]}맛이 납니다.`
+    }
+        return text;
+}
+}
+class 불맛소세지 extends 소세지 {
+    taste(){
+        let text = "불 맛도 나네요"
+        console.log(super.taste() + text)
+    }
+} 
+const 내소세지 = new 불맛소세지("파,불고기,치즈")
+내소세지.taste()
