@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제코베 스토어 관리자 페이지 CRUD</title>
+</head>
+<body>
+    <button id="상품불러오기">상품불러오기</button>
+    <label for="one">상품이름</label>
+        <input id="one" type="text">
+        <label for="two">제품가격</label>
+        <input id="two" type="number">
+        <label for="three">출시날짜</label>
+        <input id="three" type="date">
+        <label for="four">재고</label>
+        <input id="four" type="number">
+        <button id="상품등록하기" type="submit">상품등록하기</button>
+<script>
+    //read
+    let 상품불러오기버튼 = document.querySelector('#상품불러오기');
+    상품불러오기버튼.addEventListener('click',(e) => {
+_       //console.log('눌렀다.');
+        fetch('http://localhost:3001/product', {
+          method: 'GET'
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            for(i of data){
+                const container = document.createElement('section');
+                const productname = document.createElement('h2');
+                const price = document.createElement('p');
+                
+                productname.innerText = i.productName;
+                price.innerText = i.price;
+
+                container.appendChild(productname);
+                container.appendChild(price);
+
+                document.body.appendChild(container)
+            }
+          console.log('성공:', data);
+        })
+        .catch((error) => {
+          console.error('실패:', error);
+});
+    })
+
+    //create
+    let btnRegi = document.querySelector('#상품등록하기');
+    btnRegi.addEventListener('click',(e) => {
+_       //console.log('눌렀다.');
+        
+        const productInfo = {
+            "productName": querySelector('#one').value,
+            "price": querySelector('#two').value,
+            "stockCount": querySelector('#four').value,
+            "viewCount": 0,
+            "pubDate": querySelector('#three').value,
+            "modDate": querySelector('#three').value
+        };
+        fetch('http://localhost:3001/product', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(productInfo)
+        })
+        
+</script>
+</body>
+</html>

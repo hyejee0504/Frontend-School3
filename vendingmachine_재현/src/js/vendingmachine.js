@@ -31,8 +31,8 @@ class Vendingmachine {
         this.btnPut.addEventListener('click', (event) => {
             //화살표 함수를 써서 this가 인스턴스로 인식?
             const inputCost = parseInt(this.inputCostEl.value);
-            const myMoneyVal = parseInt(this.myMoney.textContent.replaceALL(',', ''));
-            const balanceVal = parseInt(this.balance.textContent.replaceALL(',', ''));
+            const myMoneyVal = parseInt(this.myMoney.textContent.replaceAll(',', ''));
+            const balanceVal = parseInt(this.balance.textContent.replaceAll(',', ''));
 
             if (inputCost) {
                 // 입금액이 소지금보다 적다면 
