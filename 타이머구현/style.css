@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+*{
+    font-family: 'Pretendard-Regular';
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(96.74% 276.79% at 3.59% 5.28%, #F0F4FF 0%, #A5B6EE 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 img{
+    margin: 0 auto;
+}
+
+.timer_container{
+    width: 400px;
+    height: 360px;
+    background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
+    /* shadow */
+    box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock_container{
+    display: flex;
+    justify-items: center;
+    /* flex-wrap: wrap; */
+
+}
+
+
+.timer_title{
+    font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.clock_tit{
+    font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+text-transform: uppercase;
+
+/* light */
+
+color: #A5B6EE;
+}
+
+.ir{
+    width: 0;
+   height: 0;
+   font-size: 0;
+   line-height: 0;
+}
+
+input{
+    border: none;
+    background: transparent;
+    font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+
+color: #FFFFFF;
+width: 80px;
+height: 80px;
+position: absolute;
+padding-left: 15px;
+
+
+}
+
+input::placeholder{
+    font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+
+color: #FFFFFF;
+}
+
+.clock_box{
+    background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%);
+border: 1px solid #354971;
+border-radius: 4px;
+width: 80px;
+height: 80px;
+
+}
+
+.hrs_container
+.min_container
+.sec_container{
+
+}
+
+button{
+    background: #324577;
+box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
+border-radius: 50px;
+height: 48px;
+width: 112px;
+left: 0px;
+top: 0px;
+border-radius: 50px;
+border: 0;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #617199;
+
+}
+
+
