@@ -36,14 +36,35 @@
         src="./App.js"
     ></script>
         
+    <script
+            data-plugins="transform-es2015-modules-umd"
+            type="text/babel"
+            src="./ProductInfo.js"
+        ></script>
+
+        <script
+            data-plugins="transform-es2015-modules-umd"
+            type="text/babel"
+            src="./ProductList.js"
+        ></script>
+
+        <script
+            data-plugins="transform-es2015-modules-umd"
+            type="text/babel"
+            src="./ShoppingCart.js"
+        ></script>
         <script data-plugins="transform-es2015-modules-umd" type="text/babel">
             import { productData } from "./data/data.js";
             import App from './App.js'
-
+            const app = (
+                <div>
+                    {App}
+                    </div>
+            )
             
 
             const domContainer = document.querySelector("#root");
-            ReactDOM.render(App, domContainer);
+            ReactDOM.render(app, domContainer);
 
         </script>
     </body>
