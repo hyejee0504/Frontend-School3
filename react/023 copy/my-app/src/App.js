@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 const Login = () => {
-  const [id, setId] = userState('')
-  const [id, setPW] = userState('')
+  // const [id, setId] = userState('')
+  // const [id, setPW] = userState('')
 
   const handleLoginSubmit = (e)=>{
     console.log('로그인버튼을 클릭, 로그인 정보가 들어왔습니다');
